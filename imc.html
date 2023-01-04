@@ -34,9 +34,11 @@
         var pesoAmigo = 68;
         var alturaAmigo = 1.72;
         var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
+        var imcTotal = imcCaio + imcAmigo;
 
-        mostra(imcCaio);
-        mostra(imcAmigo);
+        document.write("O IMC do Caio é " + imcCaio + "." + "<br><br>");
+        document.write("O IMC do amigo do Caio é " + imcAmigo + "." + "<br><br>");
+        document.write("A soma dos IMCs é " + imcTotal + ".")
     </script>
 </body>
 </html>
