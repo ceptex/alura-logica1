@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(peso, altura) {
+            // var imc = peso / (altura * altura);
+            return Math.round(peso / (altura * altura));
+            //var imc2 = peso2 / (altura2 * altura2);
+            //var imcTotal = imc1 + imc2;
+            // mostra ("O IMC calculado é " + Math.round(imc1));
+            // mostra ("O IMC calculado é " + Math.round(imc2));
+            // mostra ("A soma dos IMCs é " + Math.round(imcTotal));
+        }
+        
+        var pesoCaio = 98;
+        var alturaCaio = 1.69;
+        var imcCaio = calculaImc(pesoCaio, alturaCaio);
+
+        var pesoAmigo = 68;
+        var alturaAmigo = 1.72;
+        var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
+
+        mostra(imcCaio);
+        mostra(imcAmigo);
+    </script>
+</body>
+</html>

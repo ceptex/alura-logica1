@@ -1,0 +1,34 @@
+<meta charset="UTF-8" />
+<h1>Exercício 1</h1>
+<script>
+  var nome1 = "Caio";
+  var nome2 = "Joaquim";
+  var nome3 = "Bia";
+  var nascNome1 = 1986;
+  var nascNome2 = 1993;
+  var nascNome3 = 1995;
+
+  var anoAtual = 2022;
+  var mediaIdade =
+    (anoAtual - nascNome1 + (anoAtual - nascNome2) + (anoAtual - nascNome3)) /
+    3;
+
+  document.write(nome1 + " tem " + (anoAtual - nascNome1) + " anos;" + "<br>");
+  document.write(nome2 + " tem " + (anoAtual - nascNome2) + " anos;" + "<br>");
+  document.write(nome3 + " tem " + (anoAtual - nascNome3) + " anos;" + "<br>");
+
+  document.write("<br>A média das idades é " + Math.round(mediaIdade) + ".<br><br>");
+</script>
+
+<h1>Exercício 2</h1>
+<script>
+	var tanque = 40;
+	var consGasolina = 480;
+	var consAlcool = 300;
+	document.write("Queremos calcular qual é o consumo de um carro com diferentes tipos de combustível.<br><br>")
+	document.write("Fatores relevantes: <br><ul>Seu tanque possui capacidade para " + tanque + " litros de combustível;<br>")
+	document.write("Encher o tanque apenas com gasolina o permite rodar " + consGasolina + " quilômetros;<br>")
+	document.write("Encher o tanque apenas com álcool o permite rodar " + consAlcool + " quilômetros;</ul><br>")
+	document.write("O consumo de gasolina é " + (consGasolina / tanque) + " quilômetros por litro.<br>");
+	document.write("O consumo de álcool é " + (consAlcool / tanque) + " quilômetros por litro.<br>");
+</script>
