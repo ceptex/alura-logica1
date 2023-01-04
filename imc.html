@@ -27,18 +27,26 @@
             // mostra ("A soma dos IMCs é " + Math.round(imcTotal));
         }
         
-        var pesoCaio = 98;
-        var alturaCaio = 1.69;
-        var imcCaio = calculaImc(pesoCaio, alturaCaio);
+        // var pesoCaio = 98;
+        // var alturaCaio = 1.69;
+        // var imcCaio = calculaImc(pesoCaio, alturaCaio);
 
-        var pesoAmigo = 68;
-        var alturaAmigo = 1.72;
-        var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
-        var imcTotal = imcCaio + imcAmigo;
+        // var pesoAmigo = 68;
+        // var alturaAmigo = 1.72;
+        // var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
+        // var imcTotal = imcCaio + imcAmigo;
 
-        document.write("O IMC do Caio é " + imcCaio + "." + "<br><br>");
-        document.write("O IMC do amigo do Caio é " + imcAmigo + "." + "<br><br>");
-        document.write("A soma dos IMCs é " + imcTotal + ".")
+        // mostra("O IMC do Caio é " + imcCaio + ".");
+        // mostra("O IMC do amigo do Caio é " + imcAmigo + ".");
+        // mostra("A soma dos IMCs é " + imcTotal + ".");
+
+        var nome = prompt("Informe o seu nome");
+        var alturaInformada = prompt(nome + ", informe sua altura");
+        var pesoInformado = prompt(nome + ", informe seu peso");
+        
+        var imc = calculaImc(pesoInformado, alturaInformada);
+
+        mostra(nome + ", o seu IMC é " + imc + ".");
     </script>
 </body>
 </html>
