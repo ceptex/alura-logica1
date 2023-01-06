@@ -1,29 +1,41 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futebol</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de Pontos</title>
+  </head>
+  <body>
     <script>
-        function pulaLinha() {
-            document.write("<br>");
-            document.write("<br>");
-        }
+      function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+      }
 
-        function mostra(frase) {
-            document.write(frase);
-            pulaLinha();
-        }
+      function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
 
-        var vitorias = parseInt(prompt("Entre com o número de vitórias:"));
-        var empates = parseInt(prompt("Entre com o número de empates:"));
-        
-        var pontos = vitorias * 3 + empates;
+      var vitorias = parseInt(prompt("Entre com o número de vitórias do seu time:"));
+      var empates = parseInt(prompt("Entre com o número de empates do seu time:"));
 
-        mostra ("A pontuação do seu time é " + pontos + ".");
+      var pontos = vitorias * 3 + empates;
+
+      mostra("A pontuação do seu time é " + pontos + ".");
+
+      if (pontos > 28) {
+        mostra("Seu time está melhor do que o ano passado.");
+      }
+      if (pontos < 28) {
+        mostra("Seu time está pior do que o ano passado.");
+      }
+      if (pontos === 28) {
+        mostra("Seu time está com a potuação igual ao do ano passado.");
+      }
+
+      mostra("Fim do programa.");
 
     </script>
-</body>
+  </body>
 </html>
