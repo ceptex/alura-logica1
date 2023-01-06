@@ -1,52 +1,64 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de IMC</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        function pulaLinha() {
-            document.write("<br>");
-            document.write("<br>");
-        }
+      function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+      }
 
-        function mostra(frase) {
-            document.write(frase);
-            pulaLinha();
-        }
+      function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+      }
 
-        function calculaImc(peso, altura) {
-            // var imc = peso / (altura * altura);
-            return Math.round(peso / (altura * altura));
-            //var imc2 = peso2 / (altura2 * altura2);
-            //var imcTotal = imc1 + imc2;
-            // mostra ("O IMC calculado é " + Math.round(imc1));
-            // mostra ("O IMC calculado é " + Math.round(imc2));
-            // mostra ("A soma dos IMCs é " + Math.round(imcTotal));
-        }
-        
-        // var pesoCaio = 98;
-        // var alturaCaio = 1.69;
-        // var imcCaio = calculaImc(pesoCaio, alturaCaio);
+      function calculaImc(peso, altura) {
+        // var imc = peso / (altura * altura);
+        return Math.round(peso / (altura * altura));
+        //var imc2 = peso2 / (altura2 * altura2);
+        //var imcTotal = imc1 + imc2;
+        // mostra ("O IMC calculado é " + Math.round(imc1));
+        // mostra ("O IMC calculado é " + Math.round(imc2));
+        // mostra ("A soma dos IMCs é " + Math.round(imcTotal));
+      }
 
-        // var pesoAmigo = 68;
-        // var alturaAmigo = 1.72;
-        // var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
-        // var imcTotal = imcCaio + imcAmigo;
+      // var pesoCaio = 98;
+      // var alturaCaio = 1.69;
+      // var imcCaio = calculaImc(pesoCaio, alturaCaio);
 
-        // mostra("O IMC do Caio é " + imcCaio + ".");
-        // mostra("O IMC do amigo do Caio é " + imcAmigo + ".");
-        // mostra("A soma dos IMCs é " + imcTotal + ".");
+      // var pesoAmigo = 68;
+      // var alturaAmigo = 1.72;
+      // var imcAmigo = calculaImc(pesoAmigo, alturaAmigo);
+      // var imcTotal = imcCaio + imcAmigo;
 
-        var nome = prompt("Informe o seu nome");
-        var alturaInformada = prompt(nome + ", informe sua altura");
-        var pesoInformado = prompt(nome + ", informe seu peso");
-        
-        var imc = calculaImc(pesoInformado, alturaInformada);
+      // mostra("O IMC do Caio é " + imcCaio + ".");
+      // mostra("O IMC do amigo do Caio é " + imcAmigo + ".");
+      // mostra("A soma dos IMCs é " + imcTotal + ".");
 
-        mostra(nome + ", o seu IMC é " + imc + ".");
+      var nome = prompt("Informe o seu nome");
+      var alturaInformada = prompt(nome + ", informe sua altura");
+      var pesoInformado = prompt(nome + ", informe seu peso");
+
+      var imc = calculaImc(pesoInformado, alturaInformada);
+
+      mostra(nome + ", o seu IMC é " + imc + ".");
+
+      if (imc < 18.5) {
+        mostra(nome + ", cuidado. Seu IMC está abaixo do limite recomendado.");
+      }
+
+      if (imc >= 18.5 && imc <= 35) {
+        mostra("Legal, " + nome + " seu IMC está dentro da faixa recomendada.");
+      }
+
+      if (imc > 35) {
+        mostra(nome + ", cuidado. Seu IMC está acima do recomendado.");
+      }
     </script>
-</body>
+  </body>
 </html>
