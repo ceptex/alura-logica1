@@ -18,28 +18,39 @@
         pulaLinha();
       }
 
-      var numeroPensado = Math.round(Math.random() * 10);
+      function sorteia(n) {
+        n = Math.round(Math.random() * 100);
+        return n;
+      }
+      var numeroPensado = sorteia();
+
       var nome = prompt("Qual o seu nome?");
       alert(
         "Olá, " +
           nome +
           "." +
-          " Você precisa acertar o número que estou pensando! É um número inteiro entre 1 e 10..."
+          " Você precisa acertar o número que estou pensando! É um número inteiro entre 0 e 100..."
       );
       var chute = parseInt(prompt("Digite seu chute!"));
 
       if (chute == numeroPensado) {
         mostra("Acertô miseravi!");
       } else {
-        mostra("Não foi desta vez... O número pensado era " + numeroPensado + ".")
+        if (chute > numeroPensado) {
+          mostra("Chutou alto! Eu estava pensando em " + numeroPensado);
+        } else {
+          if (chute < numeroPensado) {
+            mostra("Ih, muito baixo... Meu número era " + numeroPensado);
+          }
+        }
       }
-    //   if (chute > numeroPensado) {
-    //     mostra("Quase, mas foi muito alto!");
-    //   }
-    //   if (chute < numeroPensado) {
-    //     mostra("Na raspa do caqui! Mas chutou muito baixo!");
-    //   }
 
+      //   if (chute > numeroPensado) {
+      //     mostra("Quase, mas foi muito alto!");
+      //   }
+      //   if (chute < numeroPensado) {
+      //     mostra("Na raspa do caqui! Mas chutou muito baixo!");
+      //   }
     </script>
   </body>
 </html>
