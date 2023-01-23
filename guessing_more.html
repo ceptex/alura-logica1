@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Another Guessing Game</title>
+  </head>
+  <body>
+    <input type="number" />
+    <button>Guess</button>
+    <script>
+      alert(
+        "Try to find what number I'm thinking. It's an integer from 0 to 10"
+      );
+      function sorteia(n) {
+        n = Math.round(Math.random() * 10);
+        return n;
+      }
+      var secret = sorteia();
+
+      var input = document.querySelector("input");
+      input.focus();
+
+      function verify() {
+        if (input.value == secret) {
+          alert("You found it!");
+        }
+        if (input.value > secret) {
+          alert("Too high! Try again!");
+        }
+        if (input.value < secret) {
+          alert("Down low... Try again!");
+        }
+        input.value = "";
+        input.focus();
+      }
+
+      var button = document.querySelector("button");
+      button.onclick = verify;
+    </script>
+  </body>
+</html>
