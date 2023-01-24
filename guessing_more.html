@@ -17,20 +17,22 @@
         n = Math.round(Math.random() * 10);
         return n;
       }
-      var secret = sorteia();
+      var secrets = [5, 7, 10, 2, 9];
 
       var input = document.querySelector("input");
       input.focus();
 
       function verify() {
-        if (input.value == secret) {
-          alert("You found it!");
+        var found = false;
+        for (var position = 0; position < secrets.length; position++) {
+          if (input.value == secrets[position]) {
+            alert("You found it!");
+            found = true;
+            break;
+          }
         }
-        if (input.value > secret) {
-          alert("Too high! Try again!");
-        }
-        if (input.value < secret) {
-          alert("Down low... Try again!");
+        if (found == false) {
+          alert("Not this time... Try again!");
         }
         input.value = "";
         input.focus();
