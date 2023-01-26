@@ -11,13 +11,38 @@
     <button>Guess</button>
     <script>
       alert(
-        "Try to find what number I'm thinking. It's an integer from 0 to 10"
+        "Try to find what number I'm thinking. It's an integer from 1 to 10"
       );
-      function sorteia(n) {
-        n = Math.round(Math.random() * 10);
-        return n;
+      function sort() {
+        return Math.round(Math.random() * 10);
       }
-      var secrets = [5, 7, 10, 2, 9];
+
+      function sortNums(quantity) {
+        var secrets = [];
+        var num = 1;
+        while (num <= quantity) {
+          var randomNum = sort();
+          if (randomNum !== 0) {
+            var found = false;
+            for (var position = 0; position < secrets.length; position++) {
+              if (secrets[position] == randomNum) {
+                found = true;
+                break;
+              }
+            }
+
+            if (found == false) {
+              secrets.push(randomNum);
+              num++;
+            }
+          }
+        }
+        return secrets;
+      }
+
+      var secrets = sortNums(5);
+
+      console.log(secrets);
 
       var input = document.querySelector("input");
       input.focus();
